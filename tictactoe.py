@@ -29,7 +29,6 @@ def print_board(board):
     print()
     draw_line()
 
-# print_board(board)
 
 # Quit the game or program
 def quit(user_input):
@@ -45,7 +44,6 @@ def check_input(user_input):
   user_input = int(user_input)
   # check if its 1 - 9
   if not bounds(user_input): return False # if number is not out of bound return False
-
   return True
 
 def isnum(user_input):
@@ -100,7 +98,6 @@ def check_row(user, board):
     if complete_row: return True
   return False
 
-
 def check_col(user, board):
   for col in range(3):
     complete_col = True
@@ -110,7 +107,6 @@ def check_col(user, board):
         break
     if complete_col: return True
   return False
-
 
 def check_diag(user, board):
   # top left to bottom right
@@ -124,13 +120,12 @@ while turns < 9:
   active_user = current_user(user)
   print_board(board)
   user_input = input("Enter a position 1 through 9 or enter \"q\" to quit: ")
-  if quit(user_input): break # Break out of the loop and end the program
+  if quit(user_input): break
   if not check_input(user_input):
     print("Please try again.")
-    continue # run the loop from beginning
-  user_input = int(user_input) - 1 # index start from zero not 1 but user enter 1 to 9 not 0 to 8
+    continue
+  user_input = int(user_input) - 1
   coords = coordinates(user_input)
-  # board[0][0] = "X" # Test case to test that first row and first col is not Empty
   if istaken(coords, board):
     print("Please try again.")
     continue
