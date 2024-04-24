@@ -2,7 +2,7 @@
 
 # NOTE: I have modified the code to be more flexible, not the same as in the video.
 
-
+# NOTE: Try to make it more interactive with the user and competitor
 board = [
   ["1", "2", "3"],
   ["4", "5", "6"],
@@ -139,3 +139,9 @@ while turns < 9:
     print_board(board)
     print("Tie!")
   user = not user
+
+
+
+# todo: 1. API to link html & CSS to python project
+# todo: 2. Make AI to play with you in game and make it unbeatable to win
+# todo: 3. Make the game has two choices to choose between to play with your freind or play with AI
